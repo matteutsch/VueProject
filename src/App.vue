@@ -8,24 +8,25 @@ import { BootstrapVue } from "bootstrap-vue";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { getAllUsers } from "./services/ApiService.vue";
 
-/* onMounted(async () => {
+let usersData = ref<Object[]>([]);
+onMounted(async () => {
   try {
-    const usersData = await getAllUsers();
-    console.log(usersData);
+    usersData.value = await getAllUsers();
+    console.log("usersData in App.vue:", usersData);
   } catch (error) {
     console.error("Fehler beim Abrufen der Benutzerdaten:", error);
   }
-}); */
+});
 </script>
 
 <template>
   <div class="d-flex flex-column justify-content-between h-100">
     <div class="p-4 h-100">
       <Header></Header>
-      <RouterView />
+      <RouterView :usersData="usersData" />
     </div>
     <Footer></Footer>
   </div>

@@ -1,7 +1,28 @@
+<script lang="ts">
+export default {
+  props: {
+    user: {
+      type: Object,
+      required: true,
+    },
+  },
+};
+</script>
+
 <template>
-  <div class="px-5 py-2 text-center list-item w-100 fs-5">
-    <i class="bi bi-person-circle me-4"></i>
-    <span>UserName</span>
+  <div class="px-5 py-2 text-start list-item w-100 fs-5">
+    <img
+      style="
+         {
+          width: 48px;
+          height: 48px;
+        }
+      "
+      class="rounded-circle me-4"
+      :src="user.avatar"
+      alt="User Avatar"
+    />
+    <span>{{ user.first_name }} {{ user.last_name }} </span>
   </div>
 </template>
 
