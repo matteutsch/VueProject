@@ -23,7 +23,7 @@ export default {
 
 <template>
   <div
-    class="bg-primary-subtle rounded-4 w-75 list-shadow py-4 h-100 overflow-y"
+    class="bg-primary-subtle rounded-4 w-100 list-shadow py-4 h-100 overflow-y"
   >
     <div>
       <UserItem

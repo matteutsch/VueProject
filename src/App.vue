@@ -11,7 +11,6 @@ let usersData = ref<Object[]>([]);
 onMounted(async () => {
   try {
     usersData.value = await getAllUsers();
-    console.log("usersData in App.vue:", usersData.value);
   } catch (error) {
     console.error("Fehler beim Abrufen der Benutzerdaten:", error);
   }
@@ -19,7 +18,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="d-flex flex-column justify-content-between h-100">
+  <div class="d-flex flex-column justify-content-between h-f">
     <div class="p-4 h-100">
       <Header></Header>
       <RouterView :usersData="usersData" />
@@ -28,4 +27,8 @@ onMounted(async () => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.h-f {
+  height: calc(100% - 24px);
+}
+</style>
