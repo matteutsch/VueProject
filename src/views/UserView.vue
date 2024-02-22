@@ -21,7 +21,7 @@ const handleUserSelected = (user: any) => {
   <main class="d-flex justify-content-between mt-4 h-85">
     <div class="w-50">
       <UserList
-        :usersData="usersData.data"
+        :usersData="usersData"
         @userSelected="handleUserSelected"
       ></UserList>
     </div>

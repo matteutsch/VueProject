@@ -25,6 +25,7 @@ export default {
 <template>
   <div class="fs-1 d-flex align-items-center mb-4">
     <img
+      style="width: 80px; height: 80px"
       class="rounded-circle me-4"
       :src="selectedUser.avatar"
       alt="User Avatar"

@@ -3,6 +3,7 @@ export default {
   props: {
     user: {
       type: Object,
+      default: () => [],
       required: true,
     },
   },
@@ -12,12 +13,7 @@ export default {
 <template>
   <div class="px-5 py-2 text-start list-item w-100 fs-5">
     <img
-      style="
-         {
-          width: 48px;
-          height: 48px;
-        }
-      "
+      style="width: 48px; height: 48px"
       class="rounded-circle me-4"
       :src="user.avatar"
       alt="User Avatar"
