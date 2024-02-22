@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Header from "./components/Header.vue";
+import { RouterView } from "vue-router";
 import Footer from "./components/Footer.vue";
+import Header from "./components/Header.vue";
 
 import { onMounted, ref } from "vue";
 import { getAllUsers } from "./services/ApiService.vue";
@@ -18,7 +18,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="d-flex flex-column justify-content-between h-f">
+  <div class="d-flex flex-column justify-content-between h-100">
     <div class="p-4 h-100">
       <Header></Header>
       <RouterView :usersData="usersData" />

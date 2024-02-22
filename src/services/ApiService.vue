@@ -7,10 +7,6 @@ const data: any = reactive({ users: [] });
 const baseurl = "https://reqres.in/api/users";
 
 export const getAllUsers = async (): Promise<User[]> => {
-  /* let resp = await fetch(url);
-  data.users.data = await resp.json();
-  return data.users.data; */
-
   // Fetch data from page 1
   let respPage1 = await fetch(`${baseurl}?page=1`);
   let page1Data = await respPage1.json();

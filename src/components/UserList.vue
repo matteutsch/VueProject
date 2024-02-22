@@ -1,10 +1,16 @@
 <script lang="ts">
 import UserItem from "@/components/UserItem.vue";
-import { isArrayLiteralExpression } from "typescript";
+import UserDetail from "@/components/UserDetail.vue";
 
 export default {
   components: {
     UserItem,
+    UserDetail,
+  },
+  data() {
+    return {
+      isCreating: false,
+    };
   },
   props: {
     usersData: {

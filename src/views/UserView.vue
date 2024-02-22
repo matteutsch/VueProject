@@ -13,7 +13,7 @@ const handleUserSelected = (user: any) => {
 </script>
 
 <template>
-  <main class="d-flex justify-content-between mt-4 h-85">
+  <main class="d-flex justify-content-between pt-5 h-85">
     <div class="w-50">
       <UserList
         :usersData="usersData"
