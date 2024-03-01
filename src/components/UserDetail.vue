@@ -244,7 +244,7 @@ export default {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-5px); /* Ändere den Versatz nach Bedarf */
+    transform: translateX(-5px);
   }
 }
 input:focus {

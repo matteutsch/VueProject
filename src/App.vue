@@ -27,8 +27,4 @@ onMounted(async () => {
   </div>
 </template>
 
-<style scoped>
-.h-f {
-  height: calc(100% - 24px);
-}
-</style>
+<style scoped></style>
